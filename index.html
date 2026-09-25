@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Rebeca Midena de Matos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="topo">
+            <img src="imagens/foto.png" alt="Foto de Rebeca Midena de Matos" class="foto-perfil">
+            <div class="informacoes">
+                <div class="retangulo">
+                    <h1>Rebeca Midena de Matos</h1>
+                </div>
+                <p class="cargo">Desenvolvedora Web Front-end</p>
+<p>
+    Água Marinha, 104 - Vila Cristal, Tarumã-SP
+</p>
+
+<p class="contato-linha">
+<img src="icones/telefone.png" class="tel" alt="Ícone do Telefone">
+    <span>(18) 99682-4093</span>
+</p>
+<p class="contato-linha">
+<img src="icones/email.png" class="email" alt="Ícone do E-mail">
+    <span>rebecamidena6@gmail.com</span>
+</p>
+<p>LinkedIn: <a href="https://linkedin.com">https://linkedin.com</a></p>
+<p>GitHub: <a href="https://github.com">https://github.com</a></p>
+        </div>
+    </header>
+
+    <main>
+        <section class="secao objetivo">
+            <h2>OBJETIVO</h2>
+            <p>Busco estágio no mercado de trabalho, onde eu possa desenvolver
+                minhas habilidades, experiências e contribuir positivamente para
+                a equipe. Tenho disposição para aprender, responsabilidade e
+                grande vontade de crescer profissionalmente.</p>
+        </section>
+
+        <section class="secao habilidades-competencias">
+            <h2>HABILIDADES E COMPETÊNCIAS</h2>
+            <ul>
+                <li>Projetos com Arduino</li>
+                <li>Conhecimentos de informática</li>
+                <li>Pacote Office e rotinas administrativas</li>
+                <li>Boa comunicação e trabalho em equipe</li>
+                <li>Facilidade de aprendizado e adaptação</li>
+                <li>Lógica de programação</li>
+                <li>Desenvolvimento web</li>
+            </ul>
+        </section>
+
+        <section class="secao tecnologias">
+            <h2>TECNOLOGIAS</h2>
+            <p>Conhecimento em linguagens: C, C++, HTML5, CSS3, JavaScript e Arduino.</p>
+            <p>Conhecimentos em lógica de programação, desenvolvimento web
+                e projetos com Arduino.</p>
+        </section>
+
+        <section class="secao formacao-academica">
+            <h2>FORMAÇÃO ACADÊMICA</h2>
+            <h3>Ensino Médio Completo</h3>
+            <p>Escola Estadual Vila do Lago</p>
+            <h3>Superior em andamento</h3>
+            <p>UTFPR - Análise e Desenvolvimento de Sistemas</p>
+        </section>
+
+        <section class="secao experiencia-profissional">
+            <h2>EXPERIÊNCIAS PROFISSIONAIS</h2>
+            <h3>Auxiliar Administrativo</h3>
+            <p>(ATUAL) Mongel - Locação, reparos e vendas de Guindastes LTDA.</p>
+        </section>
+
+        <section class="secao certificacoes-eventos">
+            <h2>CERTIFICAÇÕES E EVENTOS</h2>
+            <ul>
+                <li>E Lógica - Fevereiro/2023 a Dezembro/2023</li>
+                <li>33ª Semana de Informática (Tecnologias e Computação) - 2022</li>
+                <li>Robótica - Junho/2019 a Dezembro/2022</li>
+                <li>Evento Arduino Day Açailândia - 2021</li>
+                <li>IBM Educathon - 2021</li>
+            </ul>
+        </section>
+
+        <section class="secao">
+            <h2>INFORMAÇÕES ADICIONAIS</h2>
+            <ul>
+                <li>Disponibilidade de horários</li>
+                <li>Facilidade em realizar treinamentos e aprender novas funções</li>
+                <li>Participação em eventos e projetos educacionais de informática e robótica</li>
+                <li>Boa comunicação e facilidade em realizar leitura labial</li>
+            </ul>
+        </section>
+
+        <!-- Botão para abrir o Modal -->
+        <button type="button" id="abrirModal" class="btn-abrir">Enviar informações de contato</button>
+
+        <!-- Formulário Estilo Modal -->
+        <dialog id="modalContato">
+            <h2>Informações de Contato</h2>
+            <form method="dialog">
+                <div class="campo-form">
+                    <label id="lblNome" for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required aria-labelledby="lblNome">
+                </div>
+                <div class="campo-form">
+                    <label id="lblInstagram" for="instagram">Link para o Instagram:</label>
+                    <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com..." required aria-labelledby="lblInstagram">
+                </div>
+                <div class="campo-form">
+                    <label id="lblWhatsapp" for="whatsapp">Número do WhatsApp:</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(XX) XXXXX-XXXX" required aria-labelledby="lblWhatsapp">
+                </div>
+                <div class="botoes-modal">
+                    <button type="button" id="fecharModal" class="btn-fechar">Fechar</button>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+
+
+<script>
+    // Seleciona o modal e os botões
+    const modal = document.getElementById('modalContato');
+    const btnAbrir = document.getElementById('abrirModal');
+    const btnFechar = document.getElementById('fecharModal');
+
+    // Seleciona o formulário
+    const formulario = modal.querySelector('form');
+
+    // Botão para abrir o modal
+    btnAbrir.addEventListener('click', function () {
+        modal.showModal();
+    });
+
+    // Botão para fechar o modal
+    btnFechar.addEventListener('click', function () {
+        modal.close();
+    });
+
+    // Ação do botão Enviar
+    formulario.addEventListener('submit', function (evento) {
+        evento.preventDefault();
+
+        // Verifica se os campos obrigatórios estão preenchidos
+        if (!formulario.checkValidity()) {
+            formulario.reportValidity();
+            return;
+        }
+
+        // Mensagem de confirmação
+        alert('Informações de contato enviadas com sucesso!');
+
+        // Limpa os campos e fecha o modal
+        formulario.reset();
+        modal.close();
+    });
+</script>

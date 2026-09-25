@@ -1,0 +1,270 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .cabecalho {
+            text-align: center;
+            padding: 20px;
+            background-color:#e06781;
+        } 
+
+        .tel, .email {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .topo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Mantém o formato circular e tamanho da imagem */
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .informacoes {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .retangulo {
+            width: 100%;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+        }
+
+        /* Mantém o tamanho da fonte e a fonte do nome */
+        .retangulo h1{
+            margin: 0;
+            font-size: 32px;
+            overflow-wrap: break-word;
+            font-weight: 700;
+            font-family: 'Poppins', Arial, sans-serif;
+            color:turquoise;
+        }
+        /* Mantém o tamanho da fonte e a fonte do nome */
+        .cabecalho p{
+            margin: 0;
+            font-size: 15px;
+            overflow-wrap: break-word;
+            font-weight: 400;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        /* Mantém o tamanho da fonte do cargo */
+        .cargo {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0 10px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+        }
+
+        .secao {
+            margin-bottom: 30px;
+        }
+
+        /* Mantém o tamanho da fonte das seções e linha divisória simples */
+        .secao h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .secao h3 {
+            margin-bottom: 5px;
+        }
+
+        .secao p {
+            line-height: 1.5;
+        }
+
+        .secao ul {
+            line-height: 1.8;
+            padding-left: 25px;
+        }
+
+        /* Botão de Abrir Modal */
+        .btn-abrir {
+            display: block;
+            margin: 30px auto 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            color: black;
+            background-color: pink;
+        }
+
+        /* Estrutura básica do Modal */
+        dialog {
+            padding: 25px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        dialog h2 {
+            margin-top: 0;
+            font-size: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .campo-form {
+            margin-bottom: 15px;
+        }
+
+        .campo-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .campo-form input {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .botoes-modal {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .botoes-modal button {
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: pink;
+            color: black;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* Ajustes responsivos de tamanho mantidos */
+        @media (max-width: 768px) {
+            .topo { gap: 20px; }
+            .foto-perfil { width: 120px; height: 120px; }
+            .retangulo h1 { font-size: 24px; }
+            .cargo { font-size: 18px; }
+            main { width: 95%; padding: 25px; }
+        }
+
+        @media (max-width: 600px) {
+            .cabecalho { padding: 20px 15px; }
+            .topo { flex-direction: column; gap: 15px; }
+            .foto-perfil { width: 120px; height: 120px; }
+            .retangulo { min-height: 60px; padding: 10px; }
+            .retangulo h1 { font-size: 22px; }
+            .cargo { font-size: 17px; }
+            .cabecalho p { font-size: 14px; }
+            main { width: 100%; margin: 0; padding: 20px 18px; }
+            .secao { margin-bottom: 25px; }
+            .secao h2 { font-size: 18px; }
+            .secao p, .secao li { font-size: 15px; }
+            .secao ul { padding-left: 20px; }
+        }
+
+        @media (max-width: 300px) {
+            .foto-perfil { width: 100px; height: 100px; }
+            .retangulo h1 { font-size: 10px; }
+            .cargo { font-size: 16px; }
+            .cabecalho p { font-size: 13px; }
+            main { padding: 15px; }
+            .secao h2 { font-size: 17px; }
+            .secao p, .secao li { font-size: 14px; }
+        }
+
+            #modalContato {
+            border: 2px solid turquoise;
+            border-radius: 12px;
+            }
+
+            a:hover {
+            color: #d88ba8;
+            text-decoration: underline;
+            }
+
+            a {
+                color: pink;
+            }
+
+            input[type="url"] {
+                border: 1px solid pink;
+            }
+
+            /* Cor do subtítulo */
+            .cargo {
+                color: pink;
+            }
+
+            .secao h2 {
+                color: #e06781;
+            }
+
+            /* Cor ao passar o mouse no subtítulo */
+            .cargo:hover, a:hover, .secao h2:hover {
+                color: turquoise;
+            }
+            
+            /* Fonte do nome */
+            .retangulo h1 {
+                font-family: 'Poppins', Arial, sans-serif;
+            }
+
+            /* Seletor por ID */
+            #modalContato {
+                background-color: #fff0f5;
+            }
+
+
+            /* Pseudo-classe */
+            a:hover {
+                color: turquoise;
+            }
+
+            /* Segunda opção de estilo: itálico */
+            h3 {
+                font-style: italic;
+            }
+
+            /* Decoração de texto */
+            a {
+                text-decoration: underline;
+            }
+
+            /* Cor de fundo */
+            body {
+                background-color: #fff5f8;
+            }
